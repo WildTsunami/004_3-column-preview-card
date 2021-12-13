@@ -1,0 +1,141 @@
+/* "Lexend Deca" 400 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+/* "Big Shoulders Display" 700 */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root{
+    --bright_orange: hsl(31, 77%, 52%);
+    --dark_cyan: hsl(184, 100%, 22%);
+    --very_dark_cyan: hsl(179, 100%, 13%);
+
+    --transparent_white: hsla(0, 0%, 100%, 0.75);
+    --very_light_gray: hsl(0, 0%, 95%);
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", sans-serif, serif;
+    font-size: 15px;
+}
+
+html{
+    height: 100vh;
+
+    background-color: var(--very_light_gray);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* MOBILE VIEW (less than 1440px) */
+/* # Main card # */
+main{
+    display: flex;
+    flex-direction: column;
+
+    width: 340px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card_part{
+    padding: 40px;
+}
+.card_part>img{
+    width: 70px;
+    margin-bottom: 30px;
+}
+.card_part>h2{
+    margin-bottom: 25px;
+    
+    color: var(--very_light_gray);
+    font-family: "Big Shoulders Display", serif, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+.card_part>p{
+    margin-bottom: 25px;
+    
+    color: var(--transparent_white);
+    font-size: 1.1rem;
+    line-height: 25px;
+}
+
+.box1{
+    background-color: var(--bright_orange);
+}
+.box1 .text_button1{
+    color: var(--bright_orange);
+}
+
+.box2{
+    background-color: var(--dark_cyan);
+}
+.box2 .text_button1{
+    color: var(--dark_cyan);
+}
+
+.box3{
+    background-color: var(--very_dark_cyan);
+}
+.box3 .text_button1{
+    color: var(--very_dark_cyan)
+}
+
+/* ## "Learn More" button ## */
+.card_part>a{
+    display: block;
+
+    width: 160px;
+    height: 50px;
+    border: 2px var(--transparent_white) solid;
+
+    text-align: center;
+    background-color: var(--very_light_gray);
+    border-radius: 25px;
+}
+.card_part>a:hover{
+    background-color: transparent;
+}
+
+.text_button1{
+    height: 100%;
+
+    padding-top: 12px;
+    font-size: 1.2rem;
+}
+.text_button1:hover{
+    color: var(--transparent_white);
+}
+
+/* DESKTOP VIEW (more than 1439px) */
+@media screen and (min-width: 1440px) {
+    main{
+        flex-direction: row;
+
+        width: 800px;
+    }
+
+    .card_part>p{
+        margin-bottom: 80px;
+
+        font-size: 0.9rem;
+    }
+}
